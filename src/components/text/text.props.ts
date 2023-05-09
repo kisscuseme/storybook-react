@@ -14,7 +14,7 @@ interface TextOwnProps<E extends React.ElementType> {
    */
   size?: "small" | "medium" | "large";
   /**
-   * 입력 내용
+   * 텍스트 내용
    */
   children: React.ReactNode;
 }

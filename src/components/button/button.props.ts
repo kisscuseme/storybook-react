@@ -1,6 +1,6 @@
 export interface ButtonProps {
   /**
-   * 페이지 내 주요한 버튼인가?
+   * 주요 버튼 여부
    */
   primary?: boolean;
   /**
@@ -12,11 +12,11 @@ export interface ButtonProps {
    */
   color?: string;
   /**
-   * 버튼 크기 설정
+   * 버튼 크기
    */
   size?: "small" | "medium" | "large";
   /**
-   * 버튼 텍스트 입력
+   * 버튼 텍스트
    */
   label: string;
   /**

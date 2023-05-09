@@ -4,11 +4,11 @@ export interface InputProps {
    */
   color?: string;
   /**
-   * 크기 설정
+   * 글자 크기
    */
   size?: "small" | "medium" | "large";
   /**
-   * Placeholder 텍스트 입력
+   * Placeholder 텍스트
    */
   placeholder: string;
   /**
