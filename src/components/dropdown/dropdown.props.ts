@@ -22,10 +22,10 @@ export interface DropdownProps {
   /**
    * 데이터
    */
-  items: DataProps[];
+  items: DropdownDataProps[];
 }
 
-type DataProps = {
+type DropdownDataProps = {
   key: string;
   href: string;
   label: string;

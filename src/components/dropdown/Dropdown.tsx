@@ -3,7 +3,7 @@ import { DropdownProps } from "./dropdown.props";
 import "./dropdown.css";
 
 /**
- * 기본 버튼 컴포넌트
+ * 기본 드롭다운 컴포넌트
  */
 export const Dropdown = ({
   size = "medium",
@@ -24,7 +24,7 @@ export const Dropdown = ({
       </BootstrapDropdown.Toggle>
 
       <BootstrapDropdown.Menu className={`dropdown--${size}`}>
-        {items.map(item => <BootstrapDropdown.Item href={item["href"]} eventKey={item["key"]}>{item["label"]}</BootstrapDropdown.Item>)}
+        {items.map(item => <BootstrapDropdown.Item href={item["href"]} key={item["key"]} eventKey={item["key"]}>{item["label"]}</BootstrapDropdown.Item>)}
       </BootstrapDropdown.Menu>
     </BootstrapDropdown>
   );
