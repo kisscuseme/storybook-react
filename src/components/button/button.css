@@ -9,6 +9,11 @@
   color: var(--color);
 }
 
+.button:hover {
+  background-color: var(--color);
+  color: var(--background-color);
+}
+
 .button--small {
   font-size: 12px;
   padding: 10px 16px;

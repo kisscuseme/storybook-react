@@ -1,3 +1,4 @@
+import { Button as BootstrapButton } from 'react-bootstrap';
 import { ButtonProps } from "./button.props";
 import "./button.css";
 
@@ -12,15 +13,14 @@ export const Button = ({
   label,
   ...props
 }: ButtonProps) => {
-  document.documentElement.style.setProperty('--color', color ? color : (primary ? '#1e1e1e' : '#5e5e53'));
-  document.documentElement.style.setProperty('--background-color', backgroundColor ? backgroundColor : 'transparent');
+  document.documentElement.style.setProperty('--color', color ? color : (primary ? '#1e1e1e' : '#6e6e6e'));
+  document.documentElement.style.setProperty('--background-color', backgroundColor ? backgroundColor : '#ffffff');
   return (
-    <button
-      type="button"
+    <BootstrapButton
       className={["button", `button--${size}`].join(" ")}
       {...props}
     >
       {label}
-    </button>
+    </BootstrapButton>
   );
 };
