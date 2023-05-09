@@ -19,8 +19,4 @@ export interface ButtonProps {
    * 버튼 텍스트
    */
   label: string;
-  /**
-   * 클릭 핸들러
-   */
-  onClick?: () => void;
 }
