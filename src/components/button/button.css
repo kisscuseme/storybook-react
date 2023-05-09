@@ -5,15 +5,8 @@
   cursor: pointer;
   display: inline-block;
   line-height: 1;
-  background-color: transparent;
-}
-
-.button--primary {
-  color: #1e1e1e;
-}
-
-.button--secondary {
-  color: #5e5e5e;
+  background-color: var(--background-color);
+  color: var(--color);
 }
 
 .button--small {

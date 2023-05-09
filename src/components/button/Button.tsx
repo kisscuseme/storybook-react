@@ -12,12 +12,12 @@ export const Button = ({
   label,
   ...props
 }: ButtonProps) => {
-  const mode = primary ? "button--primary" : "button--secondary";
+  document.documentElement.style.setProperty('--color', color ? color : (primary ? '#1e1e1e' : '#5e5e53'));
+  document.documentElement.style.setProperty('--background-color', backgroundColor ? backgroundColor : 'transparent');
   return (
     <button
       type="button"
-      className={["button", `button--${size}`, mode].join(" ")}
-      style={{ backgroundColor, color }}
+      className={["button", `button--${size}`].join(" ")}
       {...props}
     >
       {label}
