@@ -15,7 +15,7 @@ export const Text = <E extends React.ElementType>({
   const Component = as || 'div';
   let classString = "text";
   if(['h1','h2','h3','h4','h5','h6'].indexOf(as as string) < 0) {
-    classString = ["text", `text--${size}`,].join(" ");
+    classString = ["text", `text--${size}`].join(" ");
   }
 
   return (

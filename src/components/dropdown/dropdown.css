@@ -38,3 +38,8 @@
   --bs-btn-disabled-bg: var(--background-color);
   --bs-btn-disabled-border-color: var(--background-color);
 }
+
+.dropdown-menu {
+  --bs-dropdown-link-active-color: var(--color);
+  --bs-dropdown-link-active-bg: var(--background-color);
+}
