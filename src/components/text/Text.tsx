@@ -1,6 +1,7 @@
-import "./text.css";
 import React from "react";
 import { TextProps } from "./text.props";
+import { defaultStyle, sizeStyles } from "./text.styles";
+import { css } from "@emotion/react";
 
 /**
  * 기본 텍스트 컴포넌트
@@ -13,15 +14,22 @@ export const Text = <E extends React.ElementType>({
   ...props
 }: TextProps<E>) => {
   const Component = as || 'div';
-  let classString = "text";
+  
+  const textStyles = [defaultStyle];
+
+  if(color) {
+    const colorStyle = css`color: ${color}`;
+    textStyles.push(colorStyle);
+  }
+
   if(['h1','h2','h3','h4','h5','h6'].indexOf(as as string) < 0) {
-    classString = ["text", `text--${size}`].join(" ");
+    const sizeStyle = css`${sizeStyles[size]}`;
+    textStyles.push(sizeStyle);
   }
 
   return (
     <Component
-      className={classString}
-      style={{ color }}
+      css={css(textStyles)}
       {...props}
     >
       {children}
